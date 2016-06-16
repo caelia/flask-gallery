@@ -1,0 +1,10 @@
+Flask-Gallery
+=============
+
+Flask-Gallery is a Flask extension for creating image galleries.
+
+Requirements
+------------
+Flask-SQLAlchemy
+Flask-WTF
+Flask-Uploads
