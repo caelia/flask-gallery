@@ -39,6 +39,7 @@ class Creator(db.Model):
     name1 = db.Column(db.String(128))
     name2 = db.Column(db.String(256))
     display_order = db.Column(db.Integer)
+    items = db.relationship('Item', backref='creator', lazy=dynamic)
 
     def display_name(self):
         if self.display_order == 0:
