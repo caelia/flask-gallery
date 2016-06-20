@@ -42,10 +42,10 @@ class Creator(db.Model):
     items = db.relationship('Item', backref='creator', lazy=dynamic)
 
     def display_name(self):
-        if self.display_order == 0:
-            return '%s %s' % (self.name1, self.name2)
-        else:
+        if self.display_order:
             return '%s %s' % (self.name2, self.name1)
+        else:
+            return '%s %s' % (self.name1, self.name2)
 
     def __repr__(self):
         return '<Creator: %r>' % self.display_name()
